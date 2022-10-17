@@ -1,11 +1,7 @@
 import QuizList from '../../organisms/QuizList/QuizList';
 
 function QuizTemplate() {
-  return (
-    <div>
-      <QuizList />
-    </div>
-  );
+  return <QuizList />;
 }
 
 export default QuizTemplate;

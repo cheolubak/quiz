@@ -20,6 +20,8 @@ function QuizCard({
   correct_answer,
   incorrect_answers,
   choices,
+  isResult = false,
+  selectedAnswer,
   ...props
 }: QuizCardProps) {
   const [selectdChoice, setSelectedChoice] = useState<any>(null);
@@ -48,40 +50,55 @@ function QuizCard({
       <CardContent>
         <RadioGroup
           onChange={(value) => setSelectedChoice(value)}
-          disabled={!!quizResult[currentQuizIndex]?.status}
-          value={quizResult[currentQuizIndex]?.selectedAnswer}
+          disabled={!!isResult || !!quizResult[currentQuizIndex]?.status}
+          value={selectedAnswer || quizResult[currentQuizIndex]?.selectedAnswer}
         >
           {choices.map((choice) => (
             <RadioButton
               name='choice'
               value={choice}
+              key={choice}
+              className={css`
+                color: ${!!isResult
+                  ? (choice === correct_answer && '#1c7ed6') ||
+                    (choice === selectedAnswer && '#b00020') ||
+                    '#000'
+                  : '#000'};
+                font-weight: ${!!isResult
+                  ? (choice === correct_answer && '700 !important') ||
+                    (choice === selectedAnswer && '700 !important') ||
+                    '400'
+                  : '400'};
+              `}
             >
               {choice}
             </RadioButton>
           ))}
         </RadioGroup>
       </CardContent>
-      <CardFooter>
-        {currentQuizIndex > 0 && (
+      {!isResult && (
+        <CardFooter>
+          {currentQuizIndex > 0 && (
+            <Button
+              className={css`
+                width: 150px;
+              `}
+              onClick={prevQuiz}
+            >
+              이전
+            </Button>
+          )}
           <Button
             className={css`
               width: 150px;
             `}
-            onClick={prevQuiz}
+            disabled={!selectdChoice && !quizResult[currentQuizIndex]?.status}
+            onClick={clickSubmitAnswer}
           >
-            이전
+            {!!quizResult[currentQuizIndex]?.status ? '다음' : '제출'}
           </Button>
-        )}
-        <Button
-          className={css`
-            width: 150px;
-          `}
-          disabled={!selectdChoice && !quizResult[currentQuizIndex]?.status}
-          onClick={clickSubmitAnswer}
-        >
-          {!!quizResult[currentQuizIndex]?.status ? '다음' : '제출'}
-        </Button>
-      </CardFooter>
+        </CardFooter>
+      )}
     </Card>
   );
 }

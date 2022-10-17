@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const HomePage = React.lazy(() => import('./components/pages/Home'));
 const QuizPage = React.lazy(() => import('./components/pages/Quiz'));
+const ResultPage = React.lazy(() => import('./components/pages/Result'));
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,14 @@ const router = createBrowserRouter([
     element: (
       <Suspense>
         <QuizPage />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/result',
+    element: (
+      <Suspense>
+        <ResultPage />
       </Suspense>
     ),
   },
