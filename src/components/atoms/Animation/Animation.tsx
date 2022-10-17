@@ -15,7 +15,7 @@ function Animation({ onComplete, data, ...props }: AnimationProps) {
         autoplay: true,
         animationData: data,
       });
-      lottie.setSpeed(2);
+      lottie.setSpeed(3);
       lottie.addEventListener('complete', onComplete);
       loadAnimationRef.current = true;
     }
