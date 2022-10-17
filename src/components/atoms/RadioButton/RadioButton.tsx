@@ -8,11 +8,13 @@ import {
 function RadioButton({
   seleced = false,
   children,
+  disabled = false,
   ...props
 }: RadioButtonProps) {
   return (
     <RadioButtonStyled
       selected={seleced}
+      disabled={disabled}
       {...props}
     >
       <RadioButtonSelectorStyled />

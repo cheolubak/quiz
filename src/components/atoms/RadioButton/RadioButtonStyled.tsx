@@ -24,7 +24,10 @@ export const RadioButtonSelectorStyled = styled.span`
   }
 `;
 
-export const RadioButtonStyled = styled.li<{ selected: boolean }>`
+export const RadioButtonStyled = styled.li<{
+  selected: boolean;
+  disabled: boolean;
+}>`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -32,22 +35,25 @@ export const RadioButtonStyled = styled.li<{ selected: boolean }>`
   font-size: 1rem;
   font-weight: 400;
   line-height: 22px;
-  cursor: pointer;
-
-  & ${RadioButtonSelectorStyled} {
-    border-color: ${({ selected }) =>
-      (selected && 'var(--COLOR-PRIMARY)') || '#ccc'};
-
-    &::after {
-      background-color: ${({ selected }) =>
-        (selected && 'var(--COLOR-PRIMARY)') || 'transparent'};
-    }
-  }
+  cursor: ${({ disabled }) => (disabled && 'not-allowed') || 'pointer'};
 
   &:hover {
     & ${RadioButtonSelectorStyled} {
-      border-color: #aaa;
-      background-color: #eee;
+      border-color: ${({ disabled }) => (!!disabled && 'ccc') || '#aaa'};
+      background-color: ${({ disabled }) =>
+        (!!disabled && 'transparent') || '#eee'};
+    }
+  }
+
+  & ${RadioButtonSelectorStyled} {
+    border-color: ${({ selected, disabled }) =>
+      (selected && !disabled && 'var(--COLOR-PRIMARY)') || '#ccc'};
+
+    &::after {
+      background-color: ${({ selected, disabled }) =>
+        (selected && !disabled && 'var(--COLOR-PRIMARY)') ||
+        (selected && !!disabled && '#ccc') ||
+        'transparent'};
     }
   }
 `;
