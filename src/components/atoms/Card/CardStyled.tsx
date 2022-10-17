@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const CardStyled = styled.article`
+  width: 100%;
   padding: 24px;
   border-radius: 8px;
   background-color: #fff;
