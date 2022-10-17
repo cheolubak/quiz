@@ -1,7 +1,7 @@
 import { css } from '@emotion/css';
 import { useEffect, useState } from 'react';
 import { useRecoilValue } from 'recoil';
-import { useQuizSubmit } from '../../../hooks/QuizSubmit';
+import { useQuiz } from '../../../hooks/Quiz';
 import { currentQuizIndexState, quizResultState } from '../../../store/Quiz';
 import Button from '../../atoms/Button';
 import Card from '../../atoms/Card';
@@ -28,7 +28,7 @@ function QuizCard({
   const currentQuizIndex = useRecoilValue(currentQuizIndexState);
   const quizResult = useRecoilValue(quizResultState);
 
-  const { submitAnswer, prevQuiz, nextQuiz } = useQuizSubmit();
+  const { submitAnswer, prevQuiz, nextQuiz } = useQuiz();
 
   const clickSubmitAnswer = () => {
     if (!!quizResult[currentQuizIndex]?.status) {
@@ -37,10 +37,6 @@ function QuizCard({
       submitAnswer(selectdChoice);
     }
   };
-
-  useEffect(() => {
-    console.log(quizResult[currentQuizIndex]);
-  });
 
   return (
     <Card {...props}>

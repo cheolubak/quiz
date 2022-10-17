@@ -8,9 +8,9 @@ import {
 } from '../store/Quiz';
 import { quizSubmitState } from '../store/QuizSubmit';
 
-export function useQuizSubmit() {
+export function useQuiz() {
   const navigate = useNavigate();
-  const quizList = useRecoilValue(quizListState);
+  const [quizList, setQuizList] = useRecoilState(quizListState);
   const [, setQuizSubmit] = useRecoilState(quizSubmitState);
   const [currentQuizIndex, setCurrentQuizIndex] = useRecoilState(
     currentQuizIndexState
@@ -69,5 +69,12 @@ export function useQuizSubmit() {
     setQuizTime(0);
   };
 
-  return { submitAnswer, nextQuiz, prevQuiz, againQuiz };
+  const resetQuiz = () => {
+    setQuizList([]);
+    setCurrentQuizIndex(0);
+    setQuizTime(0);
+    setQuizResult([]);
+  };
+
+  return { submitAnswer, nextQuiz, prevQuiz, againQuiz, resetQuiz };
 }

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
-import { useQuizSubmit } from '../../../hooks/QuizSubmit';
+import { useQuiz } from '../../../hooks/Quiz';
 import { quizTimeState } from '../../../store/Quiz';
 import Button from '../../atoms/Button';
 import SubTitle from '../../atoms/SubTitle';
@@ -10,7 +10,7 @@ import Reviews from '../../organisms/Reviews';
 import { ResultTemplateStyled } from './ResultTemplateStyled';
 
 function ResultTemplate() {
-  const { againQuiz } = useQuizSubmit();
+  const { againQuiz } = useQuiz();
   const quizTime = useRecoilValue(quizTimeState);
 
   return (

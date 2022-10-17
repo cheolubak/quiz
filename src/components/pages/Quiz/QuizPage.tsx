@@ -1,19 +1,16 @@
 import { useEffect, useRef } from 'react';
 import { useRecoilState } from 'recoil';
-import {
-  quizListState,
-  quizResultState,
-  quizTimeState,
-} from '../../../store/Quiz';
-import QuizTemplate from '../../templates/Quiz';
 import QuizData from '../../../data/Quiz.json';
-import { shuffleArray } from '../../../util/Shuffle';
 import { Quiz } from '../../../models/Quiz';
+import {
+  quizListState, quizTimeState
+} from '../../../store/Quiz';
+import { shuffleArray } from '../../../util/Shuffle';
 import QuizSubmitAnimation from '../../molecules/QuizSubmitAnimation';
+import QuizTemplate from '../../templates/Quiz';
 
 function QuizPage() {
   const [, setQuizList] = useRecoilState(quizListState);
-  const [quizResult, setQuizResult] = useRecoilState(quizResultState);
   const [, setQuizTime] = useRecoilState(quizTimeState);
   const intervalRef = useRef<NodeJS.Timer>();
 
@@ -27,10 +24,6 @@ function QuizPage() {
       clearInterval(intervalRef.current);
     };
   }, []);
-
-  useEffect(() => {
-    console.log(quizResult);
-  }, [quizResult]);
 
   const fetchQuizList = () => {
     setQuizList((prev) =>

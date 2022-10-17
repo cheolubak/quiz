@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { useQuizSubmit } from '../../../hooks/QuizSubmit';
+import { useQuiz } from '../../../hooks/Quiz';
 import { quizSubmitState } from '../../../store/QuizSubmit';
 import Overlay from '../../atoms/Overlay';
 import CorrectAnimation from '../CorrectAnimation';
@@ -8,7 +8,7 @@ import WrongAnimation from '../WrongAnimation';
 
 function QuizSubmitAnimation() {
   const quizSubmit = useRecoilValue(quizSubmitState);
-  const { nextQuiz } = useQuizSubmit();
+  const { nextQuiz } = useQuiz();
   return (
     <>
       {!!quizSubmit && <Overlay />}

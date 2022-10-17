@@ -14,10 +14,6 @@ export default function Reviews() {
   const quizList = useRecoilValue(quizListState);
   const wrongQuizResult = useRecoilValue(wrongQuizState);
 
-  useEffect(() => {
-    console.log(wrongQuizResult);
-  }, []);
-
   return (
     <ReviewsStyled>
       <SubTitle
