@@ -1,0 +1,429 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "What type of dog is &#039;Handsome Dan&#039;, the mascot of Yale University?",
+      "correct_answer": "Bulldog",
+      "incorrect_answers": ["Yorkshire Terrier", "Boxer", "Pug"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of these bones is hardest to break?",
+      "correct_answer": "Femur",
+      "incorrect_answers": ["Cranium", "Humerus", "Tibia"]
+    },
+    {
+      "category": "Entertainment: Cartoon & Animations",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Who played Stan&#039;s dog in the South Park episode &quot;Big Gay Al&#039;s Big Gay Boat Ride&quot;?",
+      "correct_answer": "George Clooney",
+      "incorrect_answers": ["Jay Leno", "Matt Stone", "Robert Smith"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many objects are equivalent to one mole?",
+      "correct_answer": "6.022 x 10^23",
+      "incorrect_answers": ["6.002 x 10^22", "6.022 x 10^22", "6.002 x 10^23"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which element has the chemical symbol &#039;Fe&#039;?",
+      "correct_answer": "Iron",
+      "incorrect_answers": ["Gold", "Silver", "Tin"]
+    },
+    {
+      "category": "Entertainment: Musicals & Theatres",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which Shakespeare play inspired the musical &#039;West Side Story&#039;?",
+      "correct_answer": "Romeo &amp; Juliet",
+      "incorrect_answers": ["Hamlet", "Macbeth", "Othello"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Video streaming website YouTube was purchased in it&#039;s entirety by Facebook for US$1.65 billion in stock.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of these is NOT a city in India?",
+      "correct_answer": "Islamabad",
+      "incorrect_answers": ["Hyderabad", "Ahmedabad", "Ghaziabad"]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What position does Harry Potter play in Quidditch?",
+      "correct_answer": "Seeker",
+      "incorrect_answers": ["Beater", "Chaser", "Keeper"]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many federal states does Germany have?",
+      "correct_answer": "16",
+      "incorrect_answers": ["13", "32", "25"]
+    },
+    {
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "hard",
+      "question": "Joseph Stalin&#039;s real name was Ioseb Bessarionis dze Dzugashvili.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What was the first video game in the Batman &quot;Arkham&quot; series?",
+      "correct_answer": "Arkham Asylum",
+      "incorrect_answers": ["Arkham Knight", "Arkham City", "Arkham Origins"]
+    },
+    {
+      "category": "Entertainment: Musicals & Theatres",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these musicals won the Tony Award for Best Musical?",
+      "correct_answer": "Rent",
+      "incorrect_answers": ["The Color Purple", "American Idiot", "Newsies"]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Gibraltar, located just south of the Iberian peninsula, is a territory of which West Europe country?",
+      "correct_answer": "United Kingdom",
+      "incorrect_answers": ["Spain", "Portugal", "France"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year did the Battle of Agincourt take place?",
+      "correct_answer": "1415",
+      "incorrect_answers": ["1463", "1401", "1422"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In which year did the First World War begin?",
+      "correct_answer": "1914",
+      "incorrect_answers": ["1930", "1917", "1939"]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many kilobytes in one gigabyte (in decimal)?",
+      "correct_answer": "1000000",
+      "incorrect_answers": ["1024", "1000", "1048576"]
+    },
+    {
+      "category": "Entertainment: Cartoon & Animations",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these is not a real character in the cartoon series My Little Pony: Friendship is Magic?",
+      "correct_answer": "Rose Marene",
+      "incorrect_answers": ["Pinkie Pie", "Maud Pie", "Rainbow Dash"]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the right way to spell the capital of Hungary?",
+      "correct_answer": "Budapest",
+      "incorrect_answers": ["Boodapest", "Bhudapest", "Budapast"]
+    },
+    {
+      "category": "Entertainment: Musicals & Theatres",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In Les Mis&eacute;rables, who is Prison Code 24601?",
+      "correct_answer": "Jean Valjean",
+      "incorrect_answers": [
+        "Marius Pontmercy",
+        "Javert",
+        "Jean Claude Van Damme"
+      ]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Guy&#039;s Grocery Games is hosted by which presenter?",
+      "correct_answer": "Guy Fieri",
+      "incorrect_answers": ["Guy Martin", "Guy Ritchie", "Ainsley Harriott"]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What country is Cory in the House set in?",
+      "correct_answer": "The United States of America",
+      "incorrect_answers": ["Canada", "Venezuala", "England"]
+    },
+    {
+      "category": "Geography",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "Antarctica is the largest desert in the world.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the game Nuclear Throne, what character is only usable in a play through with Melting?",
+      "correct_answer": "Skeleton",
+      "incorrect_answers": ["Frog", "Horror", "Plant"]
+    },
+    {
+      "category": "Science: Computers",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of these was the name of a bug found in April 2014 in the publicly available OpenSSL cryptography library?",
+      "correct_answer": "Heartbleed",
+      "incorrect_answers": ["Shellshock", "Corrupted Blood", "Shellscript"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the video game Overwatch, which playable character is infamous for saying &quot;It&#039;s high noon.&quot;?",
+      "correct_answer": "McCree",
+      "incorrect_answers": ["Hanzo", "Pharah", "Soldier: 76"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "During the Spanish Civil War (1936), Francisco Franco fought for which political faction?",
+      "correct_answer": "Nationalist Spain",
+      "incorrect_answers": ["Republican Spain", "Popular Front", "Papal State"]
+    },
+    {
+      "category": "Celebrities",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "If he was still alive, in what year would Elvis Presley celebrate his 100th birthday?",
+      "correct_answer": "2035",
+      "incorrect_answers": ["2030", "2040", "2045"]
+    },
+    {
+      "category": "Entertainment: Cartoon & Animations",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the animated series RWBY, what is the name of the weapon used by Weiss Schnee?",
+      "correct_answer": "Myrtenaster",
+      "incorrect_answers": ["Gambol Shroud", "Crescent Rose", "Ember Celica"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "In the game Dead by Daylight, the killer Michael Myers is refered to as &quot;The Shape&quot;.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In Back to the Future Part II, Marty and Dr. Emmett Brown go to which future date?",
+      "correct_answer": "October 21, 2015",
+      "incorrect_answers": [
+        "August 28, 2015",
+        "July 20, 2015",
+        "January 25, 2015"
+      ]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these bands is the oldest?",
+      "correct_answer": "Pink Floyd",
+      "incorrect_answers": ["AC/DC", "Metallica", "Red Hot Chili Peppers"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of these characters was considered, but ultimately not included, for Super Smash Bros. Melee?",
+      "correct_answer": "James Bond",
+      "incorrect_answers": ["Diddy Kong", "Mega Man", "Wave Racer"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "Daft Punk originated in France.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How tall is the Burj Khalifa?",
+      "correct_answer": "2,722 ft",
+      "incorrect_answers": ["2,717 ft", "2,546 ft", "3,024 ft"]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the name of Sherlock Holmes&#039;s brother?",
+      "correct_answer": "Mycroft Holmes",
+      "incorrect_answers": [
+        "Mederi Holmes",
+        "Martin Holmes",
+        "Herbie Hancock Holmes"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What book series published by Jim Butcher follows a wizard in modern day Chicago?",
+      "correct_answer": "The Dresden Files",
+      "incorrect_answers": [
+        "A Hat in Time",
+        "The Cinder Spires",
+        "My Life as a Teenage Wizard"
+      ]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which artist or group did John Lennon consider &quot;son(s) of the Beatles&quot;?",
+      "correct_answer": "Jeff Lynne&#039;s Electric Light Orchestra",
+      "incorrect_answers": ["The Rolling Stones", "Pink Floyd", "The Who"]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "The dish Fugu, is made from what family of fish?",
+      "correct_answer": "Pufferfish",
+      "incorrect_answers": ["Bass", "Salmon", "Mackerel"]
+    },
+    {
+      "category": "Entertainment: Japanese Anime & Manga",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In Ms. Kobayashi&#039;s Dragon Maid, who is Kobayashi&#039;s maid?",
+      "correct_answer": "Tohru",
+      "incorrect_answers": ["Lucoa", "Kanna", "Elma"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "When was the 3rd album &quot;Notes from the Underground&quot; of the band &quot;Hollywood Undead&quot; released?",
+      "correct_answer": "2013",
+      "incorrect_answers": ["2011", "2014", "2009"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In Portal, what color is the Morality Core?",
+      "correct_answer": "Purple",
+      "incorrect_answers": ["Red", "Yellow", "Blue"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What date is referenced in the 1971 song &quot;September&quot; by Earth, Wind &amp; Fire?",
+      "correct_answer": "21st of September",
+      "incorrect_answers": [
+        "26th of September",
+        "23rd of September",
+        "24th of September"
+      ]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the name of the only remaining Grand Duchy in the world ?",
+      "correct_answer": "Luxembourg",
+      "incorrect_answers": ["Montenegro", "Liechtenstein", "Andorra"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "How many notes are there on a standard grand piano?",
+      "correct_answer": "88",
+      "incorrect_answers": ["98", "108", "78"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Rincewind from the 1995 Discworld game was voiced by which member of Monty Python?",
+      "correct_answer": "Eric Idle",
+      "incorrect_answers": ["John Cleese", "Terry Gilliam", "Michael Palin"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of the following physicists did NOT work on the Manhattan project?",
+      "correct_answer": "Murray Gell-Mann",
+      "incorrect_answers": [
+        "Richard Feynman",
+        "J. Robert Oppenheimer",
+        "John Von-Neumann"
+      ]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which genre of Hip Hop does MC Frontalot rap?",
+      "correct_answer": "Nerdcore",
+      "incorrect_answers": ["Horrorcore", "Christian", "Crunk"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which English football team is nicknamed &#039;The Tigers&#039;?",
+      "correct_answer": "Hull City",
+      "incorrect_answers": ["Cardiff City", "Bristol City", "Manchester City"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In &quot;Resident Evil 2&quot;, which virus was William Birkin mutated by?",
+      "correct_answer": "G-Virus",
+      "incorrect_answers": ["T-Virus", "C-Virus", "E-Virus"]
+    }
+  ]
+}
