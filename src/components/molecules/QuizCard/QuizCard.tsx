@@ -1,8 +1,8 @@
 import { css } from '@emotion/css';
-import React, { useEffect, useReducer, useState } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { currentQuizIndexState, quizListState } from '../../../store/Quiz';
-import { STATUS } from '../../../types/Status';
+import { useEffect, useState } from 'react';
+import { useRecoilValue } from 'recoil';
+import { useQuizSubmit } from '../../../hooks/QuizSubmit';
+import { currentQuizIndexState, quizResultState } from '../../../store/Quiz';
 import Button from '../../atoms/Button';
 import Card from '../../atoms/Card';
 import CardContent from '../../atoms/CardContent';
@@ -22,31 +22,23 @@ function QuizCard({
   choices,
   ...props
 }: QuizCardProps) {
-  const quizList = useRecoilValue(quizListState);
   const [selectdChoice, setSelectedChoice] = useState<any>(null);
-  const [currentQuizIndex, setCurrentQuizIndex] = useRecoilState(
-    currentQuizIndexState
-  );
+  const currentQuizIndex = useRecoilValue(currentQuizIndexState);
+  const quizResult = useRecoilValue(quizResultState);
+
+  const { submitAnswer, prevQuiz, nextQuiz } = useQuizSubmit();
+
+  const clickSubmitAnswer = () => {
+    if (!!quizResult[currentQuizIndex]?.status) {
+      nextQuiz();
+    } else {
+      submitAnswer(selectdChoice);
+    }
+  };
 
   useEffect(() => {
-    console.log(selectdChoice);
-  }, [selectdChoice]);
-
-  const submitAnswer = () => {
-    if (quizList[currentQuizIndex].correct_answer === selectdChoice) {
-    } else {
-    }
-  };
-
-  const nextQuestion = () => {
-    if (currentQuizIndex < quizList.length - 1) {
-      setCurrentQuizIndex((prev) => prev + 1);
-    } else {
-      goResult();
-    }
-  };
-
-  const goResult = () => {};
+    console.log(quizResult[currentQuizIndex]);
+  });
 
   return (
     <Card {...props}>
@@ -54,7 +46,11 @@ function QuizCard({
         <QuizTitle dangerouslySetInnerHTML={{ __html: question }} />
       </CardHeader>
       <CardContent>
-        <RadioGroup onChange={(value) => setSelectedChoice(value)}>
+        <RadioGroup
+          onChange={(value) => setSelectedChoice(value)}
+          disabled={!!quizResult[currentQuizIndex]?.status}
+          value={quizResult[currentQuizIndex]?.selectedAnswer}
+        >
           {choices.map((choice) => (
             <RadioButton
               name='choice'
@@ -71,6 +67,7 @@ function QuizCard({
             className={css`
               width: 150px;
             `}
+            onClick={prevQuiz}
           >
             이전
           </Button>
@@ -79,9 +76,10 @@ function QuizCard({
           className={css`
             width: 150px;
           `}
-          disabled={!selectdChoice}
+          disabled={!selectdChoice && !quizResult[currentQuizIndex]?.status}
+          onClick={clickSubmitAnswer}
         >
-          제출
+          {!!quizResult[currentQuizIndex]?.status ? '다음' : '제출'}
         </Button>
       </CardFooter>
     </Card>

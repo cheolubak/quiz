@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useRecoilState } from 'recoil';
-import { quizListState } from '../../../store/Quiz';
+import { quizListState, quizResultState } from '../../../store/Quiz';
 import QuizTemplate from '../../templates/Quiz';
 import QuizData from '../../../data/Quiz.json';
 import { shuffleArray } from '../../../util/Shuffle';
@@ -9,10 +9,15 @@ import QuizSubmitAnimation from '../../molecules/QuizSubmitAnimation';
 
 function QuizPage() {
   const [, setQuizList] = useRecoilState(quizListState);
+  const [quizResult, setQuizResult] = useRecoilState(quizResultState);
 
   useEffect(() => {
     fetchQuizList();
   }, []);
+
+  useEffect(() => {
+    console.log(quizResult);
+  }, [quizResult]);
 
   const fetchQuizList = () => {
     setQuizList(
