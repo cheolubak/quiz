@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react';
+import { RecoilRoot } from 'recoil';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+
+const HomePage = React.lazy(() => import('./components/pages/Home'));
+const QuizPage = React.lazy(() => import('./components/pages/Quiz'));
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: (
+      <Suspense>
+        <HomePage />
+      </Suspense>
+    ),
+  },
+  {
+    path: '/quiz',
+    element: (
+      <Suspense>
+        <QuizPage />
+      </Suspense>
+    ),
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <RouterProvider router={router} />
+    </RecoilRoot>
   );
 }
 

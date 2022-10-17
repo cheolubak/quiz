@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --COLOR-PRIMARY: #000;
+  --COLOR-PRIMARY-HOVER: #333;
+  --COLOR-PRIMARY-ACTIVE: #111;
+  --COLOR-WARNING: #b00020;
+  --COLOR-WARNING-HOVER: #a4223a;
+  --COLOR-WARNING-ACTIVE: #c00124;
+  --COLOR-EASY: #94d82d;
+  --COLOR-MEDIUM: #fcc419;
+  --COLOR-HARD: #f76707;
+}
