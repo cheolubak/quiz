@@ -2,6 +2,25 @@
 
 간단한 Quiz 입니다.
 
+### 실행
+1. 의존성 라이브러리 설치
+```
+$ npm install
+```
+혹은
+```
+$ yarn install
+```
+
+2. 실행
+```
+$ npm start
+```
+혹은
+```
+yarn start
+```
+
 ### 기술 스택
 - React
 - Recoil
