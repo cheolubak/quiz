@@ -18,7 +18,7 @@ function RadioGroup({
   value,
   ...props
 }: RadioGroupProps) {
-  const [selectedValue, setSelectedValue] = useState<any>();
+  const [selectedValue, setSelectedValue] = useState<any>(null);
 
   const selectValue = (value: any) => {
     setSelectedValue(value);
