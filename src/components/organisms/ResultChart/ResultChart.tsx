@@ -17,7 +17,7 @@ function ResultChart() {
     new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Correct', 'Wrong'],
+        labels: ['맞춘 개수', '틀린 개수'],
         datasets: [
           {
             label: 'Quiz Result',

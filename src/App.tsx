@@ -2,6 +2,10 @@ import React, { Suspense } from 'react';
 import { RecoilRoot } from 'recoil';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+function ErrorPage() {
+  return <h1>Error Page!!</h1>;
+}
+
 const HomePage = React.lazy(() => import('./components/pages/Home'));
 const QuizPage = React.lazy(() => import('./components/pages/Quiz'));
 const ResultPage = React.lazy(() => import('./components/pages/Result'));
@@ -30,6 +34,10 @@ const router = createBrowserRouter([
         <ResultPage />
       </Suspense>
     ),
+  },
+  {
+    path: '/*',
+    element: <ErrorPage />,
   },
 ]);
 

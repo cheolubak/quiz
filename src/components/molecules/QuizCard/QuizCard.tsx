@@ -1,8 +1,8 @@
 import { css } from '@emotion/css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useRecoilValue } from 'recoil';
 import { useQuiz } from '../../../hooks/Quiz';
-import { currentQuizIndexState, quizResultState } from '../../../store/Quiz';
+import { currentQuizIndexState, quizListState, quizResultState } from '../../../store/Quiz';
 import Button from '../../atoms/Button';
 import Card from '../../atoms/Card';
 import CardContent from '../../atoms/CardContent';
@@ -11,6 +11,7 @@ import CardHeader from '../../atoms/CardHeader';
 import QuizTitle from '../../atoms/QuizTitle';
 import RadioButton from '../../atoms/RadioButton';
 import RadioGroup from '../../atoms/RadioGroup';
+import QuizList from '../../organisms/QuizList';
 import { QuizCardProps } from './QuizCardProps';
 
 function QuizCard({
@@ -25,6 +26,7 @@ function QuizCard({
   ...props
 }: QuizCardProps) {
   const [selectdChoice, setSelectedChoice] = useState<any>(null);
+  const quizList = useRecoilValue(quizListState);
   const currentQuizIndex = useRecoilValue(currentQuizIndexState);
   const quizResult = useRecoilValue(quizResultState);
 
@@ -81,7 +83,7 @@ function QuizCard({
               `}
               onClick={prevQuiz}
             >
-              이전
+              이전 문항
             </Button>
           )}
           <Button
@@ -91,7 +93,7 @@ function QuizCard({
             disabled={!selectdChoice && !quizResult[currentQuizIndex]?.status}
             onClick={clickSubmitAnswer}
           >
-            {!!quizResult[currentQuizIndex]?.status ? '다음' : '제출'}
+            {currentQuizIndex < quizList.length - 1 ? '다음 문항' : '제출'}
           </Button>
         </CardFooter>
       )}

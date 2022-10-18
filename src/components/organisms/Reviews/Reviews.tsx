@@ -21,7 +21,7 @@ export default function Reviews() {
           text-align: center;
         `}
       >
-        Reviews(Wrong)
+        오답노트
       </SubTitle>
       <ReviewsItemsStyled>
         {wrongQuizResult.map((result, idx) => (

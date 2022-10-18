@@ -15,7 +15,7 @@ function ResultTemplate() {
 
   return (
     <ResultTemplateStyled>
-      <Title>Quiz Result</Title>
+      <Title>퀴즈 결과</Title>
       <SubTitle>Time: {quizTime.toFixed(1)}s</SubTitle>
       <ResultCart />
       <Link to='/quiz'>
@@ -23,7 +23,7 @@ function ResultTemplate() {
           size='large'
           onClick={againQuiz}
         >
-          Solve Again
+          다시 풀어보기
         </Button>
       </Link>
       <Reviews />

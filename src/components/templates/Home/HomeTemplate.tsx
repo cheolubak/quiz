@@ -8,10 +8,10 @@ import { HomeTemplateStyled } from './HomeTemplateStyled';
 function HomeTemplate() {
   return (
     <HomeTemplateStyled>
-      <Title>Welcome to Quiz!</Title>
-      <Description>Please click the START button to start</Description>
+      <Title>환영합니다!</Title>
+      <Description>퀴즈 풀기를 누르면 퀴즈가 시작됩니다.</Description>
       <Link to='/quiz'>
-        <Button>START</Button>
+        <Button>퀴즈 풀기</Button>
       </Link>
     </HomeTemplateStyled>
   );

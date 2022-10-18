@@ -15,12 +15,12 @@ describe('HomePage 렌더링', () => {
   });
 
   test('should rendered title', () => {
-    expect(screen.queryByText(/Welcome to Quiz!/i)).toBeTruthy();
+    expect(screen.queryByText(/환영합니다!/i)).toBeTruthy();
   });
 
   test('should rendered description', () => {
     expect(
-      screen.queryByText(/Please click the START button to start/i)
+      screen.queryByText(/퀴즈 풀기를 누르면 퀴즈가 시작됩니다./i)
     ).toBeTruthy();
   });
 
